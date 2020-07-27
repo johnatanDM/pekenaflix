@@ -13,33 +13,19 @@ function App() {
       <BannerMain 
           videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
           url={dadosIniciais.categorias[0].videos[0].url}
-          videoDescription={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript parte da rotina das desenvolvedoras e desnvovlvedores. Mas o que els fazem afinal? Descubra com a Vanessa!"}
+          videoDescription={"Este é um dos vídeos mais importantes do canal Manual do Mundo em 2020! O mundo está em uma corrida para conseguir o quanto antes uma vacina contra a COVID-19 e isso tem gerado muitas dúvidas. Então, nós fomos atrás de respostas! Por que demora tanto para desenvolver uma vacina? A vacina é feita com o próprio vírus?? Por que é tão difícil conseguir uma vacina??? Confira agora as respostas para estas e outras perguntas!!!"}
         />
 
-        <Carousel
-          ignoreFirstVideo
-          category={dadosIniciais.categorias[0]}
-        /> 
-                <Carousel
-          ignoreFirstVideo
-          category={dadosIniciais.categorias[1]}
-        /> 
-                <Carousel
-          ignoreFirstVideo
-          category={dadosIniciais.categorias[2]}
-        /> 
-                <Carousel
-          ignoreFirstVideo
-          category={dadosIniciais.categorias[3]}
-        /> 
-                <Carousel
-          ignoreFirstVideo
-          category={dadosIniciais.categorias[4]}
-        /> 
-                <Carousel
-          ignoreFirstVideo
-          category={dadosIniciais.categorias[5]}
-        /> 
+        
+        {dadosIniciais.categorias.map((cat, i) => {
+          return(<Carousel key={i}
+            ignoreFirstVideo
+            category={cat}
+          /> )
+        })}
+
+
+        <Footer />
     </div>
   );
 }
