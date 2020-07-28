@@ -7,9 +7,9 @@ const Main = styled.main`
     background-color: var(--black);
     color: var(--white);
     flex: 1;
-    padding-top: 50px;
-    padding-left: 5%;
-    padding-right: 5%;
+    flex-direction: column;
+    padding: 0;
+    height: 100%;
 `
 
 
@@ -17,9 +17,9 @@ export default function PageDefault({children}){
     return (
         <>
             <Menu />
-                <Main>
-                    {children}
-                </Main>
+            <Main>
+                {children}
+            </Main>
             <Footer />
         </>
     )

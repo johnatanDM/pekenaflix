@@ -32,5 +32,6 @@ export const MenuWrapper = styled.nav`
     @media(max-width: 800px) {
         height: 49px;
         justify-content: center;
+        align-item: center;
     }
 `

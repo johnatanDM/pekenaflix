@@ -21,6 +21,18 @@ body {
   padding: 0;
 }
 
+
+body {
+  --bodyPaddingTop: 94px;
+  padding-top: var(--bodyPaddingTop);
+}
+@media (max-width: 800px) {
+  body {
+    --bodyPaddingTop: 40px;
+    padding-top: var(--bodyPaddingTop);
+  }
+}
+
 a {
   color: inherit;
 } 
@@ -28,5 +40,6 @@ a {
 #root {
   min-height: calc(100vh - var(--bodyPaddingTop));
   display: flex;
+  background-color: blue;
   flex-direction: column;
 }
