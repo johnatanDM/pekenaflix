@@ -28,7 +28,7 @@ body {
 }
 @media (max-width: 800px) {
   body {
-    --bodyPaddingTop: 40px;
+    --bodyPaddingTop: 49px;
     padding-top: var(--bodyPaddingTop);
   }
 }
