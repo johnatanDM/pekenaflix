@@ -3,11 +3,14 @@ import dadosIniciais from '../../data/dados_iniciais.json'
 import BannerMain from '../../components/BannerMain'
 import Carousel from '../../components/Carousel'
 import PageDefault from '../../components/PageDefault';
+import styled from 'styled-components'
 
-
-function App() {
+const AppWrapper = styled.div`
+  bacckground: var(--grayDark);
+`
+function Home() {
   return (
-    <div style={{background: '#141414'}}>
+    <AppWrapper >
         <BannerMain 
             videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
             url={dadosIniciais.categorias[0].videos[0].url}
@@ -25,8 +28,8 @@ function App() {
 
 
         </PageDefault>
-    </div>
+    </AppWrapper>
   );
 }
 
-export default App;
+export default Home;

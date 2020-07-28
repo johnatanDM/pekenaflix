@@ -9,9 +9,10 @@ import {
   Route } from 'react-router-dom'
 import CadastroVideo from './pages/cadastro/Video'
 import CadastroCategoria from './pages/cadastro/Categoria'
+import Pagina404 from './pages/Pagina404'
 
 
-const Pagina404 = () => (<div>Página 404</div>)
+// const Pagina404 = () => (<div>Página 404</div>)
 
 ReactDOM.render(
   <BrowserRouter>
