@@ -1,4 +1,8 @@
-import styled from "styled-components"
+import styled, { css } from 'styled-components';
+
+const FormFieldWrapper = styled.div`
+  position: relative;
+`;
 
 const Input = styled.input`
     color: rgb(245, 245, 245);
@@ -21,39 +25,24 @@ const Input = styled.input`
     padding: 16px;
     border-radius: 4px;
     transition: border-color 0.3s ease 0s;
-    padding-left: ${props => props.type === 'color' ? '56px' : ''};
+    padding-left: ${(props) => (props.type === 'color' ? '56px' : '')};
     &:focus{
       border-bottom-color: var(--primary);      
+    }
+    &:focus:not([type="color"]) + span {
+      transform: scale(0.6) translateY(-10px)
     }
     &:placeholder{
       color: rgb(229, 229, 229);
     }
-` 
-const TextArea = styled.textarea`
-    color: rgb(245, 245, 245);
-    display: block;
-    width: 100%;
-    height: 130px;
-    font-size: 18px;
-    border-right-style: initial;
-    border-left-style: initial;
-    border-right-color: initial;
-    border-left-color: initial;
-    margin-bottom: 45px;
-    resize: none;
-    background: rgb(83, 88, 93);
-    outline: 0px;
-    border-width: 4px 0px;
-    border-image: initial;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid rgb(83, 88, 93);
-    padding: 16px;
-    border-radius: 4px;
-    transition: border-color 0.3s ease 0s;
-    &:focus{
-      border-bottom-color: var(--primary);
-    }
-` 
+
+    ${({ hasValue }) => hasValue && css`
+        &:not([type="color"]) + span {
+        transform: scale(0.6) translateY(-10px)
+      }
+    `}
+`;
+
 const TitleBase = styled.h1`
   background: var(--black);
   height: 150px;
@@ -68,7 +57,8 @@ const TitleBase = styled.h1`
   }
 `;
 
-const Span = styled.span`
+const Label = styled.label``;
+Label.Text = styled.span`
   align-items: center;
   color: rgb(229, 229, 229);
   height: 57px;
@@ -81,11 +71,6 @@ const Span = styled.span`
   font-style: normal;
   font-weight: 300;
   transition: all 0.1s ease-in-out 0s;
-  ${TextArea}:focus ~ &{
-      transform: scale(0.6) translateY(-10px);
-  };
-  ${Input}:focus ~ &{
-      transform: ${props => props.type === 'input' ? 'scale(0.6) translateY(-10px)' : ''
-  };
-`
-export {Input, TextArea, TitleBase, Span}
+`;
+
+export { FormFieldWrapper, Input, TitleBase, Label }
