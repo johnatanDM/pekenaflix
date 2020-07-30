@@ -1,93 +1,91 @@
 import React, {useState} from 'react'
 import PageDefault from '../../../components/PageDefault'
-import { Link } from 'react-router-dom'
 import Button from '../../../components/Button';
-import {Input, TextArea, TitleBase} from '../../../components/Form';
+import {TitleBase} from '../../../components/Form';
 // import { TitleBase } from './styles';
 import styled from 'styled-components'
+import FormField from '../../../components/FormField';
 
 
 const MainForm = styled.form` 
     padding-right: 5%;
     padding-left: 5%;
 `
-
-function useFormik({
-    initialValues
-}) {
+function CadastroCategoria() {
+    const initialValues = {
+        nomeCategoria: '',
+        descricaoCategoria: '',
+        corCategoria: '#ff0000'
+    }
+     
+    const [categorias, setCategorias] = useState([])
     const [values, setValues] = useState(initialValues)
-    function handleChange(event){
-        const filedName = event.target.getAttribute('name');
-        const value = event.target.value
+
+
+    function setValue(chave, valor) {
         setValues({
             ...values,
-            [filedName]: value,
+            [chave]: valor,
         })
     }
-    return {
-        values,
-        handleChange
-    }
-}
 
-function CadastroCategoria() {
-    const formik = useFormik({
-        initialValues: {
-            nomeCategoria: '',
-            descricaoCategoria: '',
-            corCategoria: '#ff0000'
-        }
-    })
+    function handleChange(event) {
+        const { value} = event.target;
+        setValue(
+            event.target.getAttribute('name'),
+            value)
+    }
+
+
     return(
         <PageDefault>
-            <MainForm>
-                <TitleBase>Nova Categoria</TitleBase>
-                <form onSubmit={(event) => {
+            <TitleBase>Nova Categoria</TitleBase>
+            <MainForm onSubmit={(event) => {
                     event.preventDefault()
-                    console.log(formik.values)
+                    setCategorias([...categorias, values.nomeCategoria])
+                    setValues(initialValues)
                 }}>
-                    <div className="formField">
-                        <label htmlFor="nomeCategoria">
-                            Nome da Categoria:
-                        </label>
-                        <Input 
-                            type="text"
-                            name="nomeCategoria"
-                            id="nomeCategoria"
-                            onChange={formik.handleChange}
-                            value={formik.values.nomeCategoria}
-                        />
-                    </div>
-                    <div className="formField">
-                        <label htmlFor="descricaoCategoria">
-                            Descrição da Categoria:
-                        </label>
-                        <TextArea 
-                            rows = "5"
-                            cols = "60"
-                            name="descricaoCategoria"
-                            id="descricaoCategoria"
-                            onChange={formik.handleChange}
-                            value={formik.values.descricaoCategoria}
-                        />
-                    </div><div className="formField">
-                        <label htmlFor="corCategoria">
-                            Cor da Categoria:
-                        </label>
-                        <Input 
-                            type="color"
-                            name="corCategoria"
-                            id="corCategoria"
-                            onChange={formik.handleChange}
-                            value={formik.values.corCategoria}
-                        />
-                    </div>
-                    <Button as="submit">Salvar</Button>
-                </form>
-                <Link to="/">
-                    Ir para home
-                </Link>
+
+                    <FormField 
+                        label="Nome da Categoria"
+                        type="input"
+                        name="nomeCategoria"
+                        value={values.nome}
+                        onChange={handleChange}
+
+                    />
+                    <FormField 
+                        label="Descrição da Categoria"
+                        type="textarea"
+                        name="descricaoCategoria"
+                        value={values.nome}
+                        onChange={handleChange}
+
+                    />
+
+                    <FormField 
+                        label="Cor"
+                        type="color"
+                        name="corCategoria"
+                        value={values.nome}
+                        onChange={handleChange}
+
+                    />
+                    
+                    <Button as="button" className="ButtonLink" type="submit">Salvar</Button>
+
+
             </MainForm>
+            <ul>
+                {categorias.map((categoria, indice) => {
+                    return(
+                        <li key={`${categoria}${indice}`}>
+                            {categoria}
+                        </li>
+                    )
+                })}
+            </ul>
+
         </PageDefault>
     )
 }

@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
 const Button = styled.button`
+
+    background-color: var(--black);
     border: 1px solid var(--white);
     border-radius: 5px;
     box-sizing: border-box;
@@ -26,7 +28,7 @@ const Button = styled.button`
     border: 0;
     border-radius: 0;
     bottom: 0;
-    color: var(--white)
+    color: var(--white);
     left: 0;
     width: 100%;
     right:0;

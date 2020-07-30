@@ -21,6 +21,13 @@ const Input = styled.input`
     padding: 16px;
     border-radius: 4px;
     transition: border-color 0.3s ease 0s;
+    padding-left: ${props => props.type === 'color' ? '56px' : ''};
+    &:focus{
+      border-bottom-color: var(--primary);      
+    }
+    &:placeholder{
+      color: rgb(229, 229, 229);
+    }
 ` 
 const TextArea = styled.textarea`
     color: rgb(245, 245, 245);
@@ -43,11 +50,13 @@ const TextArea = styled.textarea`
     padding: 16px;
     border-radius: 4px;
     transition: border-color 0.3s ease 0s;
+    &:focus{
+      border-bottom-color: var(--primary);
+    }
 ` 
 const TitleBase = styled.h1`
   background: var(--black);
   height: 150px;
-  border-top: 2px solid var(--primary);
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 32px;
@@ -58,4 +67,25 @@ const TitleBase = styled.h1`
     margin-bottom: 50px;
   }
 `;
-export {Input, TextArea, TitleBase}
+
+const Span = styled.span`
+  align-items: center;
+  color: rgb(229, 229, 229);
+  height: 57px;
+  position: absolute;
+  top: 0px;
+  left: 16px;
+  display: flex;
+  font-size: 18px;
+  transform-origin: 0% 0%;
+  font-style: normal;
+  font-weight: 300;
+  transition: all 0.1s ease-in-out 0s;
+  ${TextArea}:focus ~ &{
+      transform: scale(0.6) translateY(-10px);
+  };
+  ${Input}:focus ~ &{
+      transform: ${props => props.type === 'input' ? 'scale(0.6) translateY(-10px)' : ''
+  };
+`
+export {Input, TextArea, TitleBase, Span}

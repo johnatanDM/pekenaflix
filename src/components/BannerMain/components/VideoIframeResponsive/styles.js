@@ -8,6 +8,10 @@ export const VideoContainer = styled.div`
   @media (max-width: 800px) {
     display: none;
   }
+  &:after{
+    bottom: 0px;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, transparent 100%);
+  }
 `;
 
 export const ResponsiveIframe = styled.iframe`

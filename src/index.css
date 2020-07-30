@@ -40,6 +40,6 @@ a {
 #root {
   min-height: calc(100vh - var(--bodyPaddingTop));
   display: flex;
-  background-color: blue;
+  background-color: var(--black);
   flex-direction: column;
 }

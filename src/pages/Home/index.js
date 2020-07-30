@@ -6,7 +6,7 @@ import PageDefault from '../../components/PageDefault';
 import styled from 'styled-components'
 
 const AppWrapper = styled.div`
-  background: var(--grayDark);  
+  background: var(--black);  
 `
 function Home() {
   return (
