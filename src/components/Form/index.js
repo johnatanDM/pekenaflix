@@ -33,7 +33,7 @@ const TextArea = styled.textarea`
     color: rgb(245, 245, 245);
     display: block;
     width: 100%;
-    height: 57px;
+    height: 130px;
     font-size: 18px;
     border-right-style: initial;
     border-left-style: initial;
