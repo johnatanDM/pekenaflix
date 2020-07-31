@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import PageDefault from '../../../components/PageDefault';
 import Button from '../../../components/Button';
-import {TitleBase} from '../../../components/Form';
+import { TitleBase } from '../../../components/Form';
 import FormField from '../../../components/FormField';
 
 const MainForm = styled.form` 
@@ -15,8 +15,8 @@ function CadastroCategoria() {
     descricaoCategoria: '',
     corCategoria: '#ff0000',
   };
-  const [categorias, setCategorias] = useState([])
-  const [values, setValues] = useState(initialValues)
+  const [categorias, setCategorias] = useState([]);
+  const [values, setValues] = useState(initialValues);
   function setValue(chave, valor) {
     setValues({
       ...values,
@@ -31,6 +31,17 @@ function CadastroCategoria() {
       value,
     );
   }
+
+  useEffect(() => {
+    const URL = 'http://192.168.100.14:8080/categorias';
+    fetch(URL)
+      .then(async (response) => {
+        const resposta = await response.json();
+        setCategorias([
+          ...resposta,
+        ]);
+      });
+  },[]);
 
   return (
     <PageDefault>
@@ -66,10 +77,16 @@ function CadastroCategoria() {
         />
         <Button as="button" className="ButtonLink" type="submit">Salvar</Button>
       </MainForm>
+      {categorias.length === 0 && (
+        <div>
+          Loading...
+        </div>
+      )}
+
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nomeCategoria}`}>
-            {categoria}
+          <li key={`${categoria.nome}`}>
+            { categoria.nome }
           </li>
         ))}
       </ul>
