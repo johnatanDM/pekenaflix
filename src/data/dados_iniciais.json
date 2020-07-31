@@ -129,5 +129,39 @@
         }
       ]
     }
+  ],
+  "videos": [
+    {
+      "titulo": "Como os cientistas CRIAM uma VACINA?",
+      "url": "https://www.youtube.com/watch?v=zfWnJN87LeY"
+    },
+    {
+      "titulo": "O Efeito Doppler Explicado",
+      "url": "https://www.youtube.com/watch?v=78WkQObqp3U"
+    },
+    {
+      "titulo": "Como o Som Funciona?",
+      "url": "https://www.youtube.com/watch?v=WLM6-By0qBg"
+    },
+    {
+      "titulo": "O que é uma Onda?",
+      "url": "https://youtu.be/M2D5-zXlD6A"
+    },
+    {
+      "titulo": "VACINAS FAZEM MAL? Nostalgia Ciência",
+      "url": "https://www.youtube.com/watch?v=UM_mnIhHOXs&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=1"
+    },
+    {
+      "titulo": "Como tornar MARTE habitável? Com Iberê e Castanhari",
+      "url": "https://www.youtube.com/watch?v=DAyKeqm2_uc&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=2"
+    },
+    {
+      "titulo": "A origem do universo | Teoria do BIG BANG",
+      "url": "https://www.youtube.com/watch?v=Bl8Q7Lt56y0&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=3"
+    },
+    {
+      "titulo": "A TERRA É PLANA? Com Leon e Nilce",
+      "url": "https://www.youtube.com/watch?v=nEVPDqUb5dM&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=4"
+    }        
   ]
 }

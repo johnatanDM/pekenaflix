@@ -4,36 +4,27 @@ import PageDefault from '../../../components/PageDefault';
 import Button from '../../../components/Button';
 import { TitleBase } from '../../../components/Form';
 import FormField from '../../../components/FormField';
+import useForm from '../../../components/Form/useForm';
+
+const URL = 'http://192.168.100.14:8080/categorias';
 
 const MainForm = styled.form` 
     padding-right: 5%;
     padding-left: 5%;
 `;
+
 function CadastroCategoria() {
   const initialValues = {
-    nomeCategoria: '',
+    titulo: '',
     descricaoCategoria: '',
     corCategoria: '#ff0000',
   };
-  const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(initialValues);
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor,
-    });
-  }
 
-  function handleChange(event) {
-    const { value } = event.target;
-    setValue(
-      event.target.getAttribute('name'),
-      value,
-    );
-  }
+  const { handleChange, values, clearForm } = useForm(initialValues);
+
+  const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    const URL = 'http://192.168.100.14:8080/categorias';
     fetch(URL)
       .then(async (response) => {
         const resposta = await response.json();
@@ -41,23 +32,42 @@ function CadastroCategoria() {
           ...resposta,
         ]);
       });
-  },[]);
+  }, []);
+
+  const postCategoria = (categoria) => {
+    fetch(URL, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(
+        {
+          titulo: categoria.titulo,
+          cor: categoria.cor,
+        },
+      ),
+    }).then(async (response) => {
+      const resposta = await response.json();
+      setCategorias([...categorias, resposta]);
+    });
+  };
 
   return (
     <PageDefault>
       <TitleBase>Nova Categoria</TitleBase>
       <MainForm onSubmit={(event) => {
         event.preventDefault();
-        setCategorias([...categorias, values.nomeCategoria]);
-        setValues(initialValues);
+        postCategoria(values);
+        setCategorias([...categorias, values.titulo]);
+        clearForm(initialValues);
       }}
       >
-
         <FormField
           label="Nome da Categoria"
           type="input"
-          name="nomeCategoria"
-          value={values.nomeCategoria}
+          name="titulo"
+          value={values.titulo}
           onChange={handleChange}
         />
         <FormField
@@ -85,8 +95,8 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            { categoria.nome }
+          <li key={`${categoria.id}`}>
+            { categoria.titulo }
           </li>
         ))}
       </ul>

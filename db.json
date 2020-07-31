@@ -2,9 +2,180 @@
   "categorias": [
     {
       "id": 1,
-      "nome": "Asdf",
-      "descricao": "aaa sss ddd fff",
-      "cor": "#cbd1ff"
-    }   
+      "titulo": "Ciência",
+      "link": "https://www.youtube.com/watch?v=qjHfkfIs1Ug&list=PL97gYQBnS4vNz26hrAv23qNDOPgqv3AHc",
+      "cor": "#00C86F",
+      "link_extra": {
+        "text": "Vídeos de Ciência do youtube",
+        "url": "https://www.youtube.com/watch?v=qjHfkfIs1Ug&list=PL97gYQBnS4vNz26hrAv23qNDOPgqv3AHc"
+      },
+      "videos": [
+        {
+          "titulo": "Como os cientistas CRIAM uma VACINA?",
+          "url": "https://www.youtube.com/watch?v=zfWnJN87LeY"
+        },
+        {
+          "titulo": "O Efeito Doppler Explicado",
+          "url": "https://www.youtube.com/watch?v=78WkQObqp3U"
+        },
+        {
+          "titulo": "Como o Som Funciona?",
+          "url": "https://www.youtube.com/watch?v=WLM6-By0qBg"
+        },
+        {
+          "titulo": "O que é uma Onda?",
+          "url": "https://youtu.be/M2D5-zXlD6A"
+        },
+        {
+          "titulo": "VACINAS FAZEM MAL? Nostalgia Ciência",
+          "url": "https://www.youtube.com/watch?v=UM_mnIhHOXs&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=1"
+        },
+        {
+          "titulo": "Como tornar MARTE habitável? Com Iberê e Castanhari",
+          "url": "https://www.youtube.com/watch?v=DAyKeqm2_uc&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=2"
+        },
+        {
+          "titulo": "A origem do universo | Teoria do BIG BANG",
+          "url": "https://www.youtube.com/watch?v=Bl8Q7Lt56y0&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=3"
+        },
+        {
+          "titulo": "A TERRA É PLANA? Com Leon e Nilce",
+          "url": "https://www.youtube.com/watch?v=nEVPDqUb5dM&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=4"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Stand-up Comedy",
+      "cor": "##6BD1FF",
+      "link_extra": {
+        "text": "Vídeos de Stand-up Comedy",
+        "url": "https://www.youtube.com/watch?v=V-g8v6qGLZ4&list=PL97gYQBnS4vNgmobz3cuL9IgfsT4nbIm2"
+      },
+      "videos": [
+        {
+          "titulo": "COMPILADO FILA DE PIADAS - 2019 - #4",
+          "url": "https://www.youtube.com/watch?v=3aMZ9HEOi54"
+        },
+        {
+          "titulo": "COMPILADO FILA DE PIADAS - 2019 - #3",
+          "url": "https://www.youtube.com/watch?v=vJuvnXepbqI"
+        },
+        {
+          "titulo": "RODRIGO MARQUES - COMPILADO #2",
+          "url": "https://www.youtube.com/watch?v=7FHIzUJ1-Tk&t=2281s"
+        },
+        {
+          "titulo": "RODRIGO MARQUES - CONVERSADO COM A PLATEIA COMPILADO STAND UP COMEDY",
+          "url": "https://youtu.be/V-g8v6qGLZ4"
+        },
+        {
+          "titulo": "RODRIGO MARQUES - COMPILADO #3",
+          "url": "https://www.youtube.com/watch?v=cfk4g6tlQOI"
+        },
+        {
+          "titulo": "RODRIGO MARQUES - COMPILADO",
+          "url": "https://www.youtube.com/watch?v=DMjOGqh_Gvo"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Aviação",
+      "cor": "#9cd33b",
+      "link_extra": {
+        "text": "Mais videos sobre Aviação",
+        "url": "https://www.youtube.com/watch?v=AJPHMf9RwOE&list=PL97gYQBnS4vMfJcScfHbCrK_KW756TwZI"
+      },
+      "videos": [
+        {
+          "titulo": "Aviões de Grande Porte – Por Dentro do Airbus A330-200 da Azul",
+          "url": "https://www.youtube.com/watch?v=AJPHMf9RwOE"
+        },
+        {
+          "titulo": "Como Funciona uma “Turbina” de Avião? Motor a Reação Chamado de Turbofan.",
+          "url": "https://www.youtube.com/watch?v=eglDumaJeEg"
+        },
+        {
+          "titulo": "Aviões funcionam com DISQUETE?",
+          "url": "https://www.youtube.com/watch?v=wQO15uajB7k"
+        },
+        {
+          "titulo": "FUGIU Com O Avião Mais SECRETO Da União Soviética EP. 663",
+          "url": "https://www.youtube.com/watch?v=2LBSbN9Z5ZA"
+        },
+        {
+          "titulo": "Avião Cai Em Rua de Guabiruba em Santa Catarina EP. 662",
+          "url": "https://www.youtube.com/watch?v=gLXMfB8eTW0"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Pokemon TCG",
+      "cor": "orange",
+      "videos": [
+        {
+          "titulo": "POKÉMON - DECK DO BODE - Dubwool V!",
+          "url": "https://www.youtube.com/watch?v=W8-N1LK9kXk"
+        },
+        {
+          "titulo": "POKÉMON - Darkbox AINDA EXISTE!",
+          "url": "https://www.youtube.com/watch?v=ot493ub8_SA"
+        },
+        {
+          "titulo": "Todos os CORTES da Próxima Coleção Espada Escudo 3!",
+          "url": "https://www.youtube.com/watch?v=-CNpGfdxhn4"
+        },
+        {
+          "titulo": "BATALHA DE DECK COM BOLTUND V + NAGANADEL!",
+          "url": "https://www.youtube.com/watch?v=gBT6981b6y0"
+        }
+      ]
+    },
+    {
+      "titulo": "nova categoria bacanuda",
+      "id": 5
+    },
+    {
+      "titulo": "asdf",
+      "id": 6
+    },
+    {
+      "titulo": "vivi",
+      "id": 7
+    },
+    {
+      "titulo": "teste",
+      "id": 8
+    },
+    {
+      "titulo": "vdvdvd",
+      "id": 9
+    },
+    {
+      "titulo": "asdf",
+      "id": 10
+    },
+    {
+      "titulo": "vvvvv",
+      "id": 11
+    },
+    {
+      "titulo": "asdfasdfasdf",
+      "id": 12
+    },
+    {
+      "titulo": "kkkkkkkk",
+      "id": 13
+    },
+    {
+      "titulo": "asdfaffdfddaassdf",
+      "id": 14
+    },
+    {
+      "titulo": "show",
+      "id": 15
+    }
   ]
 }
