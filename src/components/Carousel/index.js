@@ -5,6 +5,7 @@ import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
 
 function Carousel({
+  id,
   ignoreFirstVideo,
   titulo,
   cor,
@@ -15,7 +16,7 @@ function Carousel({
   const categoryColor = cor;
   const categoryExtraLink = linkExtra;
   return (
-    <VideoCardGroupContainer>
+    <VideoCardGroupContainer key={id}>
       {categoryTitle && (
         <>
           <Title style={{ backgroundColor: categoryColor || 'red' }}>
@@ -51,10 +52,15 @@ function Carousel({
 }
 
 Carousel.propTypes = {
-  ignoreFirstVideo: PropTypes.string.isRequired,
+  id: PropTypes.number,
+  ignoreFirstVideo: PropTypes.bool,
   titulo: PropTypes.string.isRequired,
   cor: PropTypes.string.isRequired,
-  linkExtra: PropTypes.string.isRequired,
+  linkExtra: PropTypes.shape({
+    text: PropTypes.string,
+    url: PropTypes.string,
+  }),
+  videos: PropTypes.array,
 };
 
 export default Carousel;

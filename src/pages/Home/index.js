@@ -36,11 +36,11 @@ function Home() {
             <PageDefault>
               {dadosIniciais.map((cat) => (
                 <Carousel
-                  key={cat.key}
+                  key={cat.id}
                   ignoreFirstVideo
                   titulo={cat.titulo}
                   cor={cat.cor}
-                  linkextra={cat.link_extra}
+                  linkExtra={cat.link_extra}
                   videos={cat.videos}
                   category={cat}
                 />

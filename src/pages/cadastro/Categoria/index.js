@@ -23,9 +23,8 @@ function CadastroCategoria() {
   const { handleChange, values, clearForm } = useForm(initialValues);
 
   const [categorias, setCategorias] = useState([]);
-  const URL_TOP = `${URL_BACKEND}/categorias`;
   useEffect(() => {
-    // fetch(`${URL_BACKEND}/categorias`)
+    const URL_TOP = `${URL_BACKEND}/categorias`;
     fetch(URL_TOP)
       .then(async (response) => {
         const resposta = await response.json();
