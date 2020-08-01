@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import PageDefault from '../../../components/PageDefault';
 import Button from '../../../components/Button';
-import { TitleBase } from '../../../components/Form';
+import { TitleBase, MainForm } from '../../../components/Form';
 import FormField from '../../../components/FormField';
 import useForm from '../../../components/Form/useForm';
 import { URL_BACKEND } from '../../../config';
-
-const MainForm = styled.form` 
-    padding-right: 5%;
-    padding-left: 5%;
-`;
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
   const initialValues = {
@@ -34,39 +29,18 @@ function CadastroCategoria() {
       });
   }, []);
 
-  const postCategoria = (categoria) => {
-    fetch(`${URL_BACKEND}/categorias`, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(
-        {
-          titulo: categoria.titulo,
-          cor: categoria.cor,
-          link: categoria.link,
-          link_extra: {
-            text: categoria.descricao,
-            url: categoria.link,
-          },
-          videos: [],
-        },
-      ),
-    }).then(async (response) => {
-      const resposta = await response.json();
-      setCategorias([...categorias, resposta]);
-    });
-  };
-
   return (
     <PageDefault>
       <TitleBase>Nova Categoria</TitleBase>
       <MainForm onSubmit={(event) => {
         event.preventDefault();
-        postCategoria(values);
-        setCategorias([...categorias, values.titulo]);
-        clearForm(initialValues);
+        categoriasRepository.create({
+          titulo: values.titulo,
+          url: values.url,
+          cor: values.cor,
+        }).then(() => {
+          clearForm(initialValues);
+        });
       }}
       >
         <FormField

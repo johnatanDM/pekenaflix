@@ -32,120 +32,148 @@
       "id": 4,
       "titulo": "Pokemon TCG",
       "cor": "orange"
+    },
+    {
+      "titulo": "keyforge",
+      "cor": "#36a2d9",
+      "id": 5
     }
   ],
   "videos": [
     {
+      "id": 1,
       "categoriaId": 1,
       "titulo": "Como os cientistas CRIAM uma VACINA?",
       "url": "https://www.youtube.com/watch?v=zfWnJN87LeY"
     },
     {
+      "id": 2,
       "categoriaId": 1,
       "titulo": "O Efeito Doppler Explicado",
       "url": "https://www.youtube.com/watch?v=78WkQObqp3U"
     },
     {
+      "id": 3,
       "categoriaId": 1,
       "titulo": "Como o Som Funciona?",
       "url": "https://www.youtube.com/watch?v=WLM6-By0qBg"
     },
     {
+      "id": 4,
       "categoriaId": 1,
       "titulo": "O que é uma Onda?",
       "url": "https://youtu.be/M2D5-zXlD6A"
     },
     {
+      "id": 5,
       "categoriaId": 1,
       "titulo": "VACINAS FAZEM MAL? Nostalgia Ciência",
       "url": "https://www.youtube.com/watch?v=UM_mnIhHOXs&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=1"
     },
     {
+      "id": 6,
       "categoriaId": 1,
       "titulo": "Como tornar MARTE habitável? Com Iberê e Castanhari",
       "url": "https://www.youtube.com/watch?v=DAyKeqm2_uc&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=2"
     },
     {
+      "id": 7,
       "categoriaId": 1,
       "titulo": "A origem do universo | Teoria do BIG BANG",
       "url": "https://www.youtube.com/watch?v=Bl8Q7Lt56y0&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=3"
     },
     {
+      "id": 8,
       "categoriaId": 1,
       "titulo": "A TERRA É PLANA? Com Leon e Nilce",
       "url": "https://www.youtube.com/watch?v=nEVPDqUb5dM&list=PL2EJlPZ0iJu58A-IyCaKBM5PuYmtlz3zc&index=4"
     },
     {
+      "id": 9,
       "categoriaId": 2,
       "titulo": "COMPILADO FILA DE PIADAS - 2019 - #4",
       "url": "https://www.youtube.com/watch?v=3aMZ9HEOi54"
     },
     {
+      "id": 10,
       "categoriaId": 2,
       "titulo": "COMPILADO FILA DE PIADAS - 2019 - #3",
       "url": "https://www.youtube.com/watch?v=vJuvnXepbqI"
     },
     {
+      "id": 11,
       "categoriaId": 2,
       "titulo": "RODRIGO MARQUES - COMPILADO #2",
       "url": "https://www.youtube.com/watch?v=7FHIzUJ1-Tk&t=2281s"
     },
     {
+      "id": 12,
       "categoriaId": 2,
       "titulo": "RODRIGO MARQUES - CONVERSADO COM A PLATEIA COMPILADO STAND UP COMEDY",
       "url": "https://youtu.be/V-g8v6qGLZ4"
     },
     {
+      "id": 13,
       "categoriaId": 2,
       "titulo": "RODRIGO MARQUES - COMPILADO #3",
       "url": "https://www.youtube.com/watch?v=cfk4g6tlQOI"
     },
     {
+      "id": 14,
       "categoriaId": 2,
       "titulo": "RODRIGO MARQUES - COMPILADO",
       "url": "https://www.youtube.com/watch?v=DMjOGqh_Gvo"
     },
     {
+      "id": 15,
       "categoriaId": 3,
       "titulo": "Aviões de Grande Porte – Por Dentro do Airbus A330-200 da Azul",
       "url": "https://www.youtube.com/watch?v=AJPHMf9RwOE"
     },
     {
+      "id": 16,
       "categoriaId": 3,
       "titulo": "Como Funciona uma “Turbina” de Avião? Motor a Reação Chamado de Turbofan.",
       "url": "https://www.youtube.com/watch?v=eglDumaJeEg"
     },
     {
+      "id": 17,
       "categoriaId": 3,
       "titulo": "Aviões funcionam com DISQUETE?",
       "url": "https://www.youtube.com/watch?v=wQO15uajB7k"
     },
     {
+      "id": 18,
       "categoriaId": 3,
       "titulo": "FUGIU Com O Avião Mais SECRETO Da União Soviética EP. 663",
       "url": "https://www.youtube.com/watch?v=2LBSbN9Z5ZA"
     },
     {
+      "id": 19,
       "categoriaId": 3,
       "titulo": "Avião Cai Em Rua de Guabiruba em Santa Catarina EP. 662",
       "url": "https://www.youtube.com/watch?v=gLXMfB8eTW0"
     },
     {
+      "id": 20,
       "categoriaId": 4,
       "titulo": "POKÉMON - DECK DO BODE - Dubwool V!",
       "url": "https://www.youtube.com/watch?v=W8-N1LK9kXk"
     },
     {
+      "id": 21,
       "categoriaId": 4,
       "titulo": "POKÉMON - Darkbox AINDA EXISTE!",
       "url": "https://www.youtube.com/watch?v=ot493ub8_SA"
     },
     {
+      "id": 22,
       "categoriaId": 4,
       "titulo": "Todos os CORTES da Próxima Coleção Espada Escudo 3!",
       "url": "https://www.youtube.com/watch?v=-CNpGfdxhn4"
     },
     {
+      "id": 23,
       "categoriaId": 4,
       "titulo": "BATALHA DE DECK COM BOLTUND V + NAGANADEL!",
       "url": "https://www.youtube.com/watch?v=gBT6981b6y0"

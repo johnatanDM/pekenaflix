@@ -3,6 +3,10 @@ import styled, { css } from 'styled-components';
 const FormFieldWrapper = styled.div`
   position: relative;
 `;
+const MainForm = styled.form` 
+    padding-right: 5%;
+    padding-left: 5%;
+`;
 
 const Input = styled.input`
     color: rgb(245, 245, 245);
@@ -73,4 +77,4 @@ Label.Text = styled.span`
   transition: all 0.1s ease-in-out 0s;
 `;
 
-export { FormFieldWrapper, Input, TitleBase, Label }
+export { FormFieldWrapper, Input, TitleBase, Label, MainForm }
