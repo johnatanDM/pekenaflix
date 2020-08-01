@@ -5,8 +5,7 @@ import Button from '../../../components/Button';
 import { TitleBase } from '../../../components/Form';
 import FormField from '../../../components/FormField';
 import useForm from '../../../components/Form/useForm';
-
-const URL = 'http://192.168.100.14:8080/categorias';
+import { URL_BACKEND } from '../../../config';
 
 const MainForm = styled.form` 
     padding-right: 5%;
@@ -16,16 +15,18 @@ const MainForm = styled.form`
 function CadastroCategoria() {
   const initialValues = {
     titulo: '',
-    descricaoCategoria: '',
-    corCategoria: '#ff0000',
+    link: '',
+    descricao: '',
+    cor: '#ff0000',
   };
 
   const { handleChange, values, clearForm } = useForm(initialValues);
 
   const [categorias, setCategorias] = useState([]);
-
+  const URL_TOP = `${URL_BACKEND}/categorias`;
   useEffect(() => {
-    fetch(URL)
+    // fetch(`${URL_BACKEND}/categorias`)
+    fetch(URL_TOP)
       .then(async (response) => {
         const resposta = await response.json();
         setCategorias([
@@ -35,7 +36,7 @@ function CadastroCategoria() {
   }, []);
 
   const postCategoria = (categoria) => {
-    fetch(URL, {
+    fetch(`${URL_BACKEND}/categorias`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -45,6 +46,12 @@ function CadastroCategoria() {
         {
           titulo: categoria.titulo,
           cor: categoria.cor,
+          link: categoria.link,
+          link_extra: {
+            text: categoria.descricao,
+            url: categoria.link,
+          },
+          videos: [],
         },
       ),
     }).then(async (response) => {
@@ -71,18 +78,25 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
         <FormField
+          label="Link"
+          type="input"
+          name="link"
+          value={values.link}
+          onChange={handleChange}
+        />
+        <FormField
           label="Descrição da Categoria"
           type="textarea"
-          name="descricaoCategoria"
-          value={values.descricaoCategoria}
+          name="descricao"
+          value={values.descricao}
           onChange={handleChange}
         />
 
         <FormField
           label="Cor"
           type="color"
-          name="corCategoria"
-          value={values.corCategoria}
+          name="cor"
+          value={values.cor}
           onChange={handleChange}
         />
         <Button as="button" className="ButtonLink" type="submit">Salvar</Button>
