@@ -19,7 +19,6 @@
     "server": "json-server --watch db.json --host 192.168.100.14 --port 8080",
     "dev": "concurrently \"react-scripts start\" \"npm run server\"",
     "start": "npm run dev",
-    // "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
